@@ -1,1 +1,0 @@
-# strixnebulosa233-cmd.github.io

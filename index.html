@@ -1,36 +1,333 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="王振宇的个人主页。北京交通大学。Email: 23331128@bjtu.edu.cn。">
+  <meta name="description" content="Zhenyu Wang is an undergraduate student at Jeme Tienyow Honors College, Beijing Jiaotong University, interested in reinforcement learning and agentic AI.">
   <meta name="color-scheme" content="light">
-  <title>王振宇 | 个人主页</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23223e57'/%3E%3Cpath d='M8 9h16M10 16h12M7 23h18M16 9v14' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://strixnebulosa233-cmd.github.io/">
+  <title>Zhenyu Wang | Beijing Jiaotong University</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231d4968'/%3E%3Cpath d='M8 9h16M10 16h12M7 23h18M16 9v14' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
   <style>
-    :root { color: #202b36; background: #f7f8fa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    :root {
+      color: #1d2933;
+      background: #ffffff;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-synthesis: none;
+      --ink: #1d2933;
+      --muted: #66727d;
+      --accent: #1d4968;
+      --line: #dfe5e9;
+      --soft: #f5f7f8;
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; padding: 72px 24px; line-height: 1.7; }
-    main { max-width: 720px; margin: 0 auto; padding: 52px 56px 48px; background: #fff; border: 1px solid #e1e6ec; border-top: 4px solid #223e57; border-radius: 3px; }
-    .eyebrow { margin: 0 0 24px; color: #526274; font-size: 13px; letter-spacing: .06em; }
-    h1 { margin: 0 0 20px; font-size: clamp(32px, 6vw, 40px); line-height: 1.3; font-weight: 650; letter-spacing: .05em; }
-    .affiliation { margin: 0; font-size: 19px; }
-    .english { display: block; margin-top: 3px; color: #526274; font-size: 16px; }
-    address { margin-top: 32px; padding-top: 24px; border-top: 1px solid #e1e6ec; font-size: 16px; font-style: normal; }
-    .label { margin-right: 12px; color: #526274; }
-    a { color: #1c527f; text-underline-offset: 4px; overflow-wrap: anywhere; }
-    a:hover { color: #102f4a; }
-    a:focus-visible { outline: 3px solid #1c527f; outline-offset: 5px; border-radius: 2px; }
-    @media (max-width: 520px) { body { padding: 32px 16px; } main { padding: 32px 24px; } .label { display: block; margin-bottom: 4px; } }
-    @media print { :root { background: #fff; } body { padding: 0; } main { border: 0; padding: 24px 0; } }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    a:hover { color: #102f45; }
+
+    a:focus-visible {
+      outline: 3px solid rgba(29, 73, 104, .28);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .site-header,
+    main,
+    footer {
+      width: min(100% - 48px, 940px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .site-nav a:hover { color: var(--accent); }
+
+    main { padding: 76px 0 68px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 196px;
+      gap: clamp(40px, 8vw, 84px);
+      align-items: start;
+      padding-bottom: 66px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 650;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      color: #15232e;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 64px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -.025em;
+    }
+
+    .chinese-name {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: "Songti SC", "STSong", Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: .12em;
+    }
+
+    .affiliation {
+      margin: 28px 0 0;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .institution {
+      display: block;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 30px;
+    }
+
+    .contact-links a {
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(29, 73, 104, .35);
+    }
+
+    .portrait {
+      display: block;
+      width: 196px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--soft);
+      box-shadow: 0 12px 30px rgba(22, 42, 56, .09);
+    }
+
+    .content {
+      border-top: 1px solid var(--line);
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 42px;
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      margin: 2px 0 0;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .section-body p {
+      max-width: 680px;
+      margin: 0;
+    }
+
+    .section-body p + p { margin-top: 18px; }
+
+    .research-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 0;
+      margin: 24px 0 0;
+      padding: 0;
+      color: var(--accent);
+      list-style: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .research-list li:not(:last-child)::after {
+      content: "·";
+      margin: 0 12px;
+      color: #9ca8b0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0 38px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .site-header,
+      main,
+      footer {
+        width: min(100% - 32px, 940px);
+      }
+
+      .site-header { min-height: 66px; }
+      .site-nav { gap: 16px; }
+      main { padding: 48px 0 52px; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-bottom: 48px;
+      }
+
+      .portrait {
+        width: 150px;
+        grid-row: 1;
+      }
+
+      .hero-copy { grid-row: 2; }
+      h1 { font-size: clamp(40px, 14vw, 54px); }
+
+      .section {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 34px 0;
+      }
+
+      footer { flex-direction: column; }
+    }
+
+    @media (max-width: 420px) {
+      .wordmark { font-size: 16px; }
+      .site-nav a:first-child { display: none; }
+      .research-list { display: block; }
+      .research-list li + li { margin-top: 6px; }
+      .research-list li::after { display: none; }
+    }
+
+    @media print {
+      .site-header { display: none; }
+      main { padding: 20px 0; }
+      .portrait { box-shadow: none; }
+      footer { padding-bottom: 0; }
+    }
   </style>
 </head>
 <body>
-  <main aria-labelledby="name">
-    <p class="eyebrow">个人主页 <span aria-hidden="true">/</span> <span lang="en">Personal Homepage</span></p>
-    <h1 id="name">王振宇</h1>
-    <p class="affiliation">北京交通大学<span class="english" lang="en">Beijing Jiaotong University</span></p>
-    <address><span class="label" lang="en">Email</span><a href="mailto:23331128@bjtu.edu.cn">23331128@bjtu.edu.cn</a></address>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Zhenyu Wang, home">Zhenyu Wang</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="mailto:23331128@bjtu.edu.cn">Email</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-copy">
+        <p class="eyebrow">Undergraduate Student</p>
+        <h1 id="name">
+          Zhenyu Wang
+          <span class="chinese-name" lang="zh-CN">王振宇</span>
+        </h1>
+        <p class="affiliation">
+          Jeme Tienyow Honors College
+          <span class="institution">Beijing Jiaotong University</span>
+        </p>
+        <div class="contact-links" aria-label="Contact and profiles">
+          <a href="mailto:23331128@bjtu.edu.cn">Email</a>
+          <a href="https://github.com/strixnebulosa233-cmd" rel="me">GitHub</a>
+        </div>
+      </div>
+      <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Zhenyu Wang" width="614" height="819">
+    </section>
+
+    <div class="content">
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <div class="section-body">
+          <p>Since enrolling at Beijing Jiaotong University in 2023, I have been pursuing the eight-year integrated bachelor's-to-Ph.D. program at Jeme Tienyow Honors College under the supervision of Prof. Yongqi Sun.</p>
+        </div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+        <div class="section-body">
+          <p>Bringing together reinforcement learning and agentic AI, my current work explores how LLM-based agents can plan, learn, and operate reliably over extended tasks, with particular attention to persistent state, context and memory management, feedback-driven control, and multi-agent coordination.</p>
+          <ul class="research-list" aria-label="Research interests">
+            <li>Reinforcement Learning</li>
+            <li>LLM-based Agents</li>
+            <li>Long-Horizon Agent Systems</li>
+            <li>Context and Memory</li>
+            <li>Multi-Agent Systems</li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <footer>
+    <p>© 2026 Zhenyu Wang</p>
+    <p>Last updated September 2026</p>
+  </footer>
 </body>
 </html>
